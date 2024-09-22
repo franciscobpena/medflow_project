@@ -1,49 +1,81 @@
+#==============================
+# Bibliotecas
+#==============================
+
 import streamlit as st
 from PIL import Image
 
-# Page Configurations
+#===============================
+#Configuração da Página 
+#===============================
+
 st.set_page_config(
-    page_title="Upload das Medições"
+    page_title="Home",
+    page_icon="👋",
+    layout="wide"  
 )
 
-# Sidebar with logo and introduction
-image = Image.open('logo.png')
-st.sidebar.image(image, width=120)
-st.sidebar.markdown("# Indian Delivery Food Company")
-st.sidebar.markdown("### Your Partner in Fast Delivery")
+#===============================
+# Sidebar - Barra Lateral 
+#===============================
+image = Image.open('app.png')
+st.sidebar.image(image, width=190)
+st.sidebar.markdown("""
+    <h1 style='display: inline; font-size: 28px;'>MedFlow</h1>
+    <h2 style='display: inline; font-size: 18px;'>➤</h2>
+    """, unsafe_allow_html=True)
+st.sidebar.markdown('### Simplificando fluxos, melhorando vidas')
 st.sidebar.markdown("""---""")
-st.sidebar.markdown('## Powered by Francisco Pena 🤓')
+st.sidebar.markdown('##### Desenvolvido por [@DanielMeireles](https://www.linkedin.com/in/daniel-meireles-processos/) & [@FranciscoPena](https://franciscobpena.github.io/porfolio_projetos/)')
 
-# Main Header
-st.write("# Growth Dashboard")
-st.markdown("""---""")
+#==================================
+# Corpo principal da pagina - HOME
+#==================================
 
-# Main Content with Subheaders
+st.title("🏥Aplicativo e Dashboard")
+
+st.markdown(
+    '<p style="font-size:15px;">Melhore os processos relacionados ao atendimento hospitalar</p>',
+    unsafe_allow_html=True
+)
+
+st.markdown("---")
+
+st.header("Como utilizar o App?")
+
+st.subheader("Upload dos dados:")
 st.markdown("""
-    Growth Dashboard was built to track the growth metrics for the Indian delivery food restaurant
-    
-    ### How to use this Growth Dashboard?
-    - **Company View:**
-        - **Management View:** General behavior metrics.
-        - **Tactical View:** Weekly growth indicators.
-        - **Geographic View:** Geolocation insights.
-    - **Deliver Drivers View:**
-        - Tracking of weekly growth indicators.
-    - **Restaurant View:**
-        - Weekly growth indicators for restaurants.
+- Baixe os 02 arquivos templates devem ser importados, referente ao tempo de atendimento e chegadas de pacientes;
+- Seguir com a estrutura de dados recomendada neste repositório [Clique aqui](https://github.com/franciscobpena/medflow_project/tree/fc0885746f3df19ca2442b7aa21c09bb05e38131/dataset)
+.""")
+
+st.subheader("Visão - Entrada pacientes:")
+st.markdown("""
+- A partir do upload do arquivo "amostra_pacientes_hora.xlsx" você terá uma série de estatisticas e projeções que podem ser usadas na visão "Desempenho de processos" """)
+
+st.subheader("Visão - Desempenho dos processos:")
+st.markdown("""
+- Com base nas informações na visão “Desempenho do Processo’ você pode consultar uma série de informações referente ao processo e seu desempenho; 
+- É fortemente indicado cruzar com informações factuais e contextuais para se tomar uma melhor decisão.
 """)
 
-# Contact Information
+st.subheader("Fundamentação técnica:")
 st.markdown("""
-    ### Contact
-    - For any doubt or suggestions 
-        - [@franciscobpena](https://franciscobpena.github.io/porfolio_projetos/)
+- Estatística Inferencial;
+- Teoria das Restrições;
+- Lean e Ciência de Dados. 
 """)
 
-# Footer
+# ===============================
+# Rodapé
+# ===============================
 st.markdown("""
-    <hr style="margin-top: 3rem;">
-    <div style="text-align: center; color: #7F8C8D;">
-        <p>&copy; 2024 Indian Delivery Food Company. All rights reserved.</p>
-    </div>
-""", unsafe_allow_html=True)
+    ---
+    © 2024 LeanMasterAcademy 🦎. Todos os direitos reservados.
+""")
+
+
+
+
+
+  
