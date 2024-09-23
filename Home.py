@@ -45,13 +45,13 @@ st.header("Como utilizar o App?")
 
 st.subheader("Upload dos dados:")
 st.markdown("""
-- Baixe os 02 arquivos templates devem ser importados, referente ao tempo de atendimento e chegadas de pacientes;
-- Seguir com a estrutura de dados recomendada neste repositório [Clique aqui](https://github.com/franciscobpena/medflow_project/tree/fc0885746f3df19ca2442b7aa21c09bb05e38131/dataset)
+- Seguir com a estrutura de dados recomendada neste repositório [Clique aqui](https://github.com/franciscobpena/medflow_project/tree/fc0885746f3df19ca2442b7aa21c09bb05e38131/dataset);
+- Os 02 arquivos templates refere-se ao tempo de atendimento e chegadas de pacientes.
 .""")
 
 st.subheader("Visão - Entrada pacientes:")
 st.markdown("""
-- A partir do upload do arquivo "amostra_pacientes_hora.xlsx" você terá uma série de estatisticas e projeções que podem ser usadas na visão "Desempenho de processos" """)
+- A partir do upload do arquivo "amostra_pacientes_hora.xlsx" você terá uma série de estatisticas e projeções que vão le auxiliar no entendimento do processo """)
 
 st.subheader("Visão - Desempenho dos processos:")
 st.markdown("""
