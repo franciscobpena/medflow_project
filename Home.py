@@ -21,12 +21,12 @@ st.set_page_config(
 image = Image.open('app.png')
 st.sidebar.image(image, width=190)
 st.sidebar.markdown("""
-    <h1 style='display: inline; font-size: 28px;'>MedFlow</h1>
+    <h1 style='display: inline; font-size: 28px;'>LeanFlow</h1>
     <h2 style='display: inline; font-size: 18px;'>➤</h2>
     """, unsafe_allow_html=True)
 st.sidebar.markdown('### Simplificando fluxos, melhorando vidas')
 st.sidebar.markdown("""---""")
-st.sidebar.markdown('##### Desenvolvido por [@DanielMeireles](https://www.linkedin.com/in/daniel-meireles-processos/) & [@FranciscoPena](https://franciscobpena.github.io/porfolio_projetos/)')
+st.sidebar.markdown('##### Desenvolvido por [@FranciscoPena](https://franciscobpena.github.io/porfolio_projetos/) & [@DanielMeireles](https://www.linkedin.com/in/daniel-meireles-processos/) 🤓')
 
 #==================================
 # Corpo principal da pagina - HOME
