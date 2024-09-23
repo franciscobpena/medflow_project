@@ -50,7 +50,7 @@ st.markdown("""
 
 st.subheader("Visão - Entrada pacientes:")
 st.markdown("""
-- A partir do upload do arquivo "amostra_pacientes_hora.xlsx" você terá uma série de estatisticas e projeções que vão le auxiliar no entendimento do processo """)
+- A partir do upload do arquivo "amostra_pacientes_hora.xlsx" você terá uma série de estatisticas e projeções que vão lhe auxiliar no entendimento do processo """)
 
 st.subheader("Visão - Desempenho dos processos:")
 st.markdown("""
