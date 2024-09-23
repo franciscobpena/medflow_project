@@ -50,12 +50,13 @@ st.markdown("""
 
 st.subheader("Visão - Entrada pacientes:")
 st.markdown("""
-- A partir do upload do arquivo "amostra_pacientes_hora.xlsx" você terá uma série de estatisticas e projeções 
+- A partir do upload do arquivo template "amostra_pacientes_hora.xlsx" você terá uma série de estatisticas e projeções 
 que vão lhe auxiliar no entendimento do processo.""")
 
 st.subheader("Visão - Desempenho dos processos:")
 st.markdown("""
-- Com base nas informações na visão “Desempenho do Processo’ você pode consultar uma série de informações referente ao processo e seu desempenho; 
+- A partir do upload do arquivo template "amostra_dados_tempo_ciclo.xlsx" você pode consultar uma série 
+de informações referente ao processo e seu desempenho e realizar algumas simulações; 
 - É fortemente indicado cruzar com informações factuais e contextuais para se tomar uma melhor decisão.
 """)
 
