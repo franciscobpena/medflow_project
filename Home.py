@@ -46,8 +46,7 @@ st.header("Como utilizar o App?")
 st.subheader("Upload dos dados:")
 st.markdown("""
 - Seguir com a estrutura de dados recomendada neste repositório [Clique aqui](https://github.com/franciscobpena/medflow_project/tree/fc0885746f3df19ca2442b7aa21c09bb05e38131/dataset);
-- Os 02 arquivos templates refere-se ao tempo de atendimento e chegadas de pacientes.
-.""")
+- Os 02 arquivos templates refere-se ao tempo de atendimento e chegadas de pacientes.""")
 
 st.subheader("Visão - Entrada pacientes:")
 st.markdown("""
