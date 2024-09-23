@@ -26,7 +26,7 @@ image = Image.open(image_path)
 st.sidebar.image(image, width=190)
 
 st.sidebar.markdown("""
-    <h1 style='display: inline; font-size: 28px;'>MedFlow</h1>
+    <h1 style='display: inline; font-size: 28px;'>LeanFlow</h1>
     <h2 style='display: inline; font-size: 18px;'>➤</h2>
     """, unsafe_allow_html=True)
 st.sidebar.markdown('### Simplificando fluxos, melhorando vidas')
