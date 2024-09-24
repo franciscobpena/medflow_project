@@ -80,16 +80,23 @@ if 'amostra_pacientes_hora.xlsx' in data_dict:
         max_value=max_date,
         format='DD-MM-YYYY'
     )
-    # Filtrar o dataframe com base nas datas selecionadas
-    df_filtered = df_pacientes_hora[(df_pacientes_hora['Data'].dt.date >= selected_dates[0]) & 
-                                    (df_pacientes_hora['Data'].dt.date <= selected_dates[1])]
+    
+    # Filtro interativo de Turno
+    if 'Turno' in df_pacientes_hora.columns:
+        selected_turno = st.sidebar.selectbox('Selecione o Turno', df_pacientes_hora['Turno'].unique())
+    
+    # Filtrar o dataframe com base nas datas e turno selecionados
+    df_filtered = df_pacientes_hora[
+        (df_pacientes_hora['Data'].dt.date >= selected_dates[0]) & 
+        (df_pacientes_hora['Data'].dt.date <= selected_dates[1]) &
+        (df_pacientes_hora['Turno'] == selected_turno)
+    ]
 else:
     st.warning("O arquivo 'amostra_pacientes_hora.xlsx' não foi carregado.")
 
 st.sidebar.markdown("""---""")
 
 st.sidebar.markdown('##### Desenvolvido por [@FranciscoPena](https://www.linkedin.com/in/franciscobpena/) & [@DanielMeireles](https://www.linkedin.com/in/daniel-meireles-processos/) 🤓')
-
 # ===============================
 # Corpo principal da página - Upload das medições
 # ===============================
