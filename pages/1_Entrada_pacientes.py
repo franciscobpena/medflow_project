@@ -81,18 +81,19 @@ if 'amostra_pacientes_hora.xlsx' in data_dict:
         format='DD-MM-YYYY'
     )
     
-    # Filtro interativo de Turno
+    # Filtro interativo de Turno com multiselect
     if 'Turno' in df_pacientes_hora.columns:
-        selected_turno = st.sidebar.selectbox('Selecione o Turno', df_pacientes_hora['Turno'].unique())
+        selected_turnos = st.sidebar.multiselect('Selecione os Turnos', df_pacientes_hora['Turno'].unique(), default=df_pacientes_hora['Turno'].unique())
     
-    # Filtrar o dataframe com base nas datas e turno selecionados
+    # Filtrar o dataframe com base nas datas e turnos selecionados
     df_filtered = df_pacientes_hora[
         (df_pacientes_hora['Data'].dt.date >= selected_dates[0]) & 
         (df_pacientes_hora['Data'].dt.date <= selected_dates[1]) &
-        (df_pacientes_hora['Turno'] == selected_turno)
+        (df_pacientes_hora['Turno'].isin(selected_turnos))
     ]
 else:
     st.warning("O arquivo 'amostra_pacientes_hora.xlsx' não foi carregado.")
+
 
 st.sidebar.markdown("""---""")
 
